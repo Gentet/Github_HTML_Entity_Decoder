@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "GitHub HML Entity Decoder",
+  "description": "This tool is to be used to decode HTML entities on a page within GitHub.",
+
+  "browser_action": {
+    "default_icon": "icon.png",
+    "name": "Click to search"
+  },
+
+  "version": "1.2",
+  "background": {
+    "scripts": [
+      "runEditor.js"
+    ]
+  },
+  "permissions": [
+        "tabs",
+        "http://*/",
+        "https://*/"
+      ],
+  "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+  },
+  "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+}
